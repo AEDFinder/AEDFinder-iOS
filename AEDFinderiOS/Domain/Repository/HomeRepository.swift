@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol HomeRepository: AnyObject {
+    func fetchHomeInfo() -> Observable<Result<HomeInfo, Error>>
+}
