@@ -9,7 +9,10 @@
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
 .DS_Store
+
+## APIKEY
 APIKEY.swift
+APIKey.plist
 
 ### Objective-C ###
 # Xcode

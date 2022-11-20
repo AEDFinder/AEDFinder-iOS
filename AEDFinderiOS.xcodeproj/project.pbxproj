@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6E012F3377DE356C696ABB0 /* Pods_AEDFinderiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585E1A6ACE686C59A04F5256 /* Pods_AEDFinderiOS.framework */; };
 		DD968E4A292A1B50007DEF58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E49292A1B50007DEF58 /* AppDelegate.swift */; };
 		DD968E4C292A1B50007DEF58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E4B292A1B50007DEF58 /* SceneDelegate.swift */; };
-		DD968E4E292A1B50007DEF58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E4D292A1B50007DEF58 /* ViewController.swift */; };
-		DD968E51292A1B50007DEF58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD968E4F292A1B50007DEF58 /* Main.storyboard */; };
 		DD968E53292A1B51007DEF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD968E52292A1B51007DEF58 /* Assets.xcassets */; };
 		DD968E56292A1B51007DEF58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD968E54292A1B51007DEF58 /* LaunchScreen.storyboard */; };
+		DD968E67292A217C007DEF58 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD968E66292A217C007DEF58 /* APIKey.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3118168D51A1FC683A61CD98 /* Pods-AEDFinderiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEDFinderiOS.release.xcconfig"; path = "Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS.release.xcconfig"; sourceTree = "<group>"; };
+		585E1A6ACE686C59A04F5256 /* Pods_AEDFinderiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEDFinderiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD968E46292A1B50007DEF58 /* AEDFinderiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDFinderiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD968E49292A1B50007DEF58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD968E4B292A1B50007DEF58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD968E4D292A1B50007DEF58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DD968E50292A1B50007DEF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD968E52292A1B51007DEF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD968E55292A1B51007DEF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD968E57292A1B51007DEF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD968E66292A217C007DEF58 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		FB62EF725B2BD38B6A27C8E4 /* Pods-AEDFinderiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEDFinderiOS.debug.xcconfig"; path = "Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E012F3377DE356C696ABB0 /* Pods_AEDFinderiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29E3D89D4ED494E7275C33D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				585E1A6ACE686C59A04F5256 /* Pods_AEDFinderiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9ACC57292D44740A96098688 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB62EF725B2BD38B6A27C8E4 /* Pods-AEDFinderiOS.debug.xcconfig */,
+				3118168D51A1FC683A61CD98 /* Pods-AEDFinderiOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD968E3D292A1B50007DEF58 = {
 			isa = PBXGroup;
 			children = (
 				DD968E48292A1B50007DEF58 /* AEDFinderiOS */,
 				DD968E47292A1B50007DEF58 /* Products */,
+				9ACC57292D44740A96098688 /* Pods */,
+				29E3D89D4ED494E7275C33D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,70 @@
 		DD968E48292A1B50007DEF58 /* AEDFinderiOS */ = {
 			isa = PBXGroup;
 			children = (
-				DD968E49292A1B50007DEF58 /* AppDelegate.swift */,
-				DD968E4B292A1B50007DEF58 /* SceneDelegate.swift */,
-				DD968E4D292A1B50007DEF58 /* ViewController.swift */,
-				DD968E4F292A1B50007DEF58 /* Main.storyboard */,
-				DD968E52292A1B51007DEF58 /* Assets.xcassets */,
-				DD968E54292A1B51007DEF58 /* LaunchScreen.storyboard */,
 				DD968E57292A1B51007DEF58 /* Info.plist */,
+				DD968E5D292A1EC1007DEF58 /* Application */,
+				DD968E5E292A2099007DEF58 /* Resource */,
+				DD968E61292A20AC007DEF58 /* Network */,
+				DD968E62292A20B9007DEF58 /* Data */,
+				DD968E63292A20C4007DEF58 /* Domain */,
+				DD968E64292A20CC007DEF58 /* Presentation */,
+				DD968E65292A20D8007DEF58 /* Util */,
+				DD968E66292A217C007DEF58 /* APIKey.plist */,
 			);
 			path = AEDFinderiOS;
+			sourceTree = "<group>";
+		};
+		DD968E5D292A1EC1007DEF58 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E49292A1B50007DEF58 /* AppDelegate.swift */,
+				DD968E4B292A1B50007DEF58 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DD968E5E292A2099007DEF58 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E52292A1B51007DEF58 /* Assets.xcassets */,
+				DD968E54292A1B51007DEF58 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DD968E61292A20AC007DEF58 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DD968E62292A20B9007DEF58 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DD968E63292A20C4007DEF58 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DD968E64292A20CC007DEF58 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DD968E65292A20D8007DEF58 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD968E5A292A1B51007DEF58 /* Build configuration list for PBXNativeTarget "AEDFinderiOS" */;
 			buildPhases = (
+				3EDEA0B54EBAF66B618C1CE0 /* [CP] Check Pods Manifest.lock */,
 				DD968E42292A1B50007DEF58 /* Sources */,
 				DD968E43292A1B50007DEF58 /* Frameworks */,
 				DD968E44292A1B50007DEF58 /* Resources */,
+				4B9DDF22E4296DDA7D010C1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,20 +204,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD968E67292A217C007DEF58 /* APIKey.plist in Resources */,
 				DD968E56292A1B51007DEF58 /* LaunchScreen.storyboard in Resources */,
 				DD968E53292A1B51007DEF58 /* Assets.xcassets in Resources */,
-				DD968E51292A1B50007DEF58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EDEA0B54EBAF66B618C1CE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AEDFinderiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B9DDF22E4296DDA7D010C1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD968E42292A1B50007DEF58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD968E4E292A1B50007DEF58 /* ViewController.swift in Sources */,
 				DD968E4A292A1B50007DEF58 /* AppDelegate.swift in Sources */,
 				DD968E4C292A1B50007DEF58 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DD968E4F292A1B50007DEF58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD968E50292A1B50007DEF58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DD968E54292A1B51007DEF58 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +394,7 @@
 		};
 		DD968E5B292A1B51007DEF58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB62EF725B2BD38B6A27C8E4 /* Pods-AEDFinderiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +405,7 @@
 				INFOPLIST_FILE = AEDFinderiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -311,6 +424,7 @@
 		};
 		DD968E5C292A1B51007DEF58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3118168D51A1FC683A61CD98 /* Pods-AEDFinderiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,7 +435,7 @@
 				INFOPLIST_FILE = AEDFinderiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
