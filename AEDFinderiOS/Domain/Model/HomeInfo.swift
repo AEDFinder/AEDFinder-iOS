@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct HomeInfo {
+    let latitude: Double
+    let longitude: Double
+}
