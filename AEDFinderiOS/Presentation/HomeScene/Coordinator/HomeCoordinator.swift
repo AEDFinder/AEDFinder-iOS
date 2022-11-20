@@ -6,3 +6,32 @@
 //
 
 import Foundation
+import UIKit
+
+protocol HomeCoordinator: Coordinator {
+    func showMain()
+}
+
+final class DefaultHomeCoordinator: HomeCoordinator {
+
+    var childCoordinators: [Coordinator] = []
+    var navigationController: UINavigationController
+    var parentCoordinator: Coordinator?
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        let repository = DefaultHomeRepository(homeNetworkService: HomeNetworkService())
+        let useCase = DefaultHomeUseCase(homeRepository: repository)
+        let viewModel = HomeViewModel(homeUseCase: useCase)
+        let vc = HomeViewController.create(with: viewModel, self)
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showMain() {
+        
+    }
+    
+}
