@@ -6,3 +6,24 @@
 //
 
 import Foundation
+import UIKit
+
+final class AppCoordinator: Coordinator {
+    var childCoordinators: [Coordinator] = []
+    
+    private var navigationController: UINavigationController!
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    
+    func start() {
+        let coordinator = DefaultHomeCoordinator(navigationController: self.navigationController)
+        self.childCoordinators.append(coordinator)
+        coordinator.parentCoordinator = self
+        coordinator.start()
+    }
+    
+    
+}
