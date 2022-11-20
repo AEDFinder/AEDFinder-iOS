@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import RxSwift
+
+protocol ViewModelType: AnyObject {
+    associatedtype Input
+    associatedtype Output
+    
+    func transform(from input: Input) -> Output
+}
