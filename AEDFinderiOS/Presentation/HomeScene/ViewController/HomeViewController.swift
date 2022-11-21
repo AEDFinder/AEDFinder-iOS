@@ -16,11 +16,18 @@ final class HomeViewController: BaseViewController {
     private var viewModel: HomeViewModel!
     private var marker: NMFMarker = NMFMarker()
     
-    private var mapView: NMFNaverMapView = {
+    private lazy var mapView: NMFNaverMapView = {
         let view = NMFNaverMapView(frame: .init())
         view.showLocationButton = true
         view.mapView.positionMode = .direction
-        view.mapView.zoomLevel = 17
+        view.mapView.zoomLevel = 17.8
+        return view
+    }()
+    
+    private var bottomSheetView: HomeBottomSheetView = {
+        let view = HomeBottomSheetView()
+        view.barViewColor = .darkGray.withAlphaComponent(0.5)
+        view.bottomSheetColor = .lightGray.withAlphaComponent(0.5)
         return view
     }()
     
@@ -47,8 +54,13 @@ final class HomeViewController: BaseViewController {
     override func setLayout() {
         view.addSubview(mapView)
         mapView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        view.addSubview(bottomSheetView)
+        bottomSheetView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
     }
     
