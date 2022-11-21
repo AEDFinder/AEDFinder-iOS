@@ -8,14 +8,15 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 final class HomeViewModel: ViewModelType {
     struct Input {
-        
+        let viewWillAppear: Observable<Void>
     }
     
     struct Output {
-        
+        let showCurrentLocation: Driver<CLLocation>
     }
     
     private weak var coordinator: HomeCoordinator?
@@ -26,7 +27,19 @@ final class HomeViewModel: ViewModelType {
     }
     
     func transform(from input: Input) -> Output {
+        let fetchCurrentLocation = input.viewWillAppear
+            .debug()
+            .flatMap(homeUseCase.getCurrentLocation)
+            .compactMap { result -> CLLocation in
+                guard case let .success(location) = result else { return CLLocation() }
+                return location
+            }
+            
         
-        return Output()
+        return Output(
+            showCurrentLocation: fetchCurrentLocation
+                .asDriver(onErrorDriveWith: .empty())
+                
+        )
     }
 }
