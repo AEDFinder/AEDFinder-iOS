@@ -7,9 +7,11 @@
 
 import Foundation
 import RxSwift
+import CoreLocation
 
 protocol HomeUseCase: AnyObject {
     func fetchHomeInfo() -> Observable<Result<HomeInfo, Error>>
+    func getCurrentLocation() -> Observable<Result<CLLocation, LocationError>>
 }
 
 final class DefaultHomeUseCase: HomeUseCase {
@@ -21,5 +23,9 @@ final class DefaultHomeUseCase: HomeUseCase {
     
     func fetchHomeInfo() -> Observable<Result<HomeInfo, Error>> {
         return self.homeRepository.fetchHomeInfo()
+    }
+    
+    func getCurrentLocation() -> Observable<Result<CLLocation, LocationError>> {
+        return self.homeRepository.getCurrentLocation()
     }
 }

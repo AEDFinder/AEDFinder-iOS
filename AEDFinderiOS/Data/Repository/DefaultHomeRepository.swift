@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import CoreLocation
 
 final class DefaultHomeRepository: HomeRepository {
     private let homeNetworkService: HomeNetworkService
@@ -26,8 +27,10 @@ final class DefaultHomeRepository: HomeRepository {
                     return .failure(error)
                 }
             }
-        
-
+    }
+    
+    func getCurrentLocation() -> Observable<Result<CLLocation, LocationError>> {
+        self.homeNetworkService.getCurrentLocation()
     }
     
 }
