@@ -13,6 +13,24 @@
 		DD968E53292A1B51007DEF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD968E52292A1B51007DEF58 /* Assets.xcassets */; };
 		DD968E56292A1B51007DEF58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD968E54292A1B51007DEF58 /* LaunchScreen.storyboard */; };
 		DD968E67292A217C007DEF58 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD968E66292A217C007DEF58 /* APIKey.plist */; };
+		DD968E69292A23C3007DEF58 /* Bundle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E68292A23C3007DEF58 /* Bundle+.swift */; };
+		DD968E6F292A2531007DEF58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E6E292A2531007DEF58 /* HomeViewController.swift */; };
+		DD968E72292A25FA007DEF58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E71292A25FA007DEF58 /* BaseViewController.swift */; };
+		DD968E75292A4D5C007DEF58 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E74292A4D5C007DEF58 /* AppCoordinator.swift */; };
+		DD968E77292A4D80007DEF58 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E76292A4D80007DEF58 /* Coordinator.swift */; };
+		DD968E79292A4ED6007DEF58 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E78292A4ED6007DEF58 /* HomeCoordinator.swift */; };
+		DD968E7B292A4FC9007DEF58 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E7A292A4FC9007DEF58 /* HomeViewModel.swift */; };
+		DD968E7D292A4FEA007DEF58 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E7C292A4FEA007DEF58 /* ViewModelType.swift */; };
+		DD968E80292A549A007DEF58 /* DefaultHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E7F292A549A007DEF58 /* DefaultHomeRepository.swift */; };
+		DD968E83292A54C4007DEF58 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E82292A54C4007DEF58 /* HomeRepository.swift */; };
+		DD968E85292A5517007DEF58 /* HomeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E84292A5517007DEF58 /* HomeNetworkService.swift */; };
+		DD968E88292A553F007DEF58 /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E87292A553F007DEF58 /* BaseNetworkService.swift */; };
+		DD968E8A292A5564007DEF58 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E89292A5564007DEF58 /* Networkable.swift */; };
+		DD968E8E292A5724007DEF58 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E8D292A5724007DEF58 /* HomeAPI.swift */; };
+		DD968E91292A57F4007DEF58 /* HomeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E90292A57F4007DEF58 /* HomeInfo.swift */; };
+		DD968E93292A58A6007DEF58 /* HomeInfoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E92292A58A6007DEF58 /* HomeInfoResponseDTO.swift */; };
+		DD968E97292A65CD007DEF58 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E96292A65CD007DEF58 /* HomeUseCase.swift */; };
+		DDCAC125292A757E00D242A8 /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC124292A757E00D242A8 /* LocationError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +43,24 @@
 		DD968E55292A1B51007DEF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD968E57292A1B51007DEF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD968E66292A217C007DEF58 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		DD968E68292A23C3007DEF58 /* Bundle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+.swift"; sourceTree = "<group>"; };
+		DD968E6E292A2531007DEF58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DD968E71292A25FA007DEF58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DD968E74292A4D5C007DEF58 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DD968E76292A4D80007DEF58 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD968E78292A4ED6007DEF58 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		DD968E7A292A4FC9007DEF58 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DD968E7C292A4FEA007DEF58 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		DD968E7F292A549A007DEF58 /* DefaultHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeRepository.swift; sourceTree = "<group>"; };
+		DD968E82292A54C4007DEF58 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		DD968E84292A5517007DEF58 /* HomeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkService.swift; sourceTree = "<group>"; };
+		DD968E87292A553F007DEF58 /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
+		DD968E89292A5564007DEF58 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		DD968E8D292A5724007DEF58 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		DD968E90292A57F4007DEF58 /* HomeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfo.swift; sourceTree = "<group>"; };
+		DD968E92292A58A6007DEF58 /* HomeInfoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoResponseDTO.swift; sourceTree = "<group>"; };
+		DD968E96292A65CD007DEF58 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		DDCAC124292A757E00D242A8 /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
 		FB62EF725B2BD38B6A27C8E4 /* Pods-AEDFinderiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEDFinderiOS.debug.xcconfig"; path = "Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				DD968E57292A1B51007DEF58 /* Info.plist */,
+				DD968E66292A217C007DEF58 /* APIKey.plist */,
 				DD968E5D292A1EC1007DEF58 /* Application */,
 				DD968E5E292A2099007DEF58 /* Resource */,
 				DD968E61292A20AC007DEF58 /* Network */,
@@ -86,7 +123,6 @@
 				DD968E63292A20C4007DEF58 /* Domain */,
 				DD968E64292A20CC007DEF58 /* Presentation */,
 				DD968E65292A20D8007DEF58 /* Util */,
-				DD968E66292A217C007DEF58 /* APIKey.plist */,
 			);
 			path = AEDFinderiOS;
 			sourceTree = "<group>";
@@ -112,6 +148,7 @@
 		DD968E61292A20AC007DEF58 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DD968E84292A5517007DEF58 /* HomeNetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -119,6 +156,8 @@
 		DD968E62292A20B9007DEF58 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DD968E86292A5538007DEF58 /* Network */,
+				DD968E7E292A5485007DEF58 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -126,6 +165,9 @@
 		DD968E63292A20C4007DEF58 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				DD968E8F292A57EA007DEF58 /* Model */,
+				DD968E81292A54BA007DEF58 /* Repository */,
+				DD968E94292A65B9007DEF58 /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -133,6 +175,8 @@
 		DD968E64292A20CC007DEF58 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DD968E70292A25E3007DEF58 /* Common */,
+				DD968E6A292A2444007DEF58 /* HomeScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -140,8 +184,138 @@
 		DD968E65292A20D8007DEF58 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				DD968E68292A23C3007DEF58 /* Bundle+.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		DD968E6A292A2444007DEF58 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E73292A4D3B007DEF58 /* Coordinator */,
+				DD968E6D292A2521007DEF58 /* ViewModel */,
+				DD968E6C292A251C007DEF58 /* ViewController */,
+				DD968E6B292A2517007DEF58 /* View */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		DD968E6B292A2517007DEF58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD968E6C292A251C007DEF58 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E6E292A2531007DEF58 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DD968E6D292A2521007DEF58 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E7A292A4FC9007DEF58 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD968E70292A25E3007DEF58 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E71292A25FA007DEF58 /* BaseViewController.swift */,
+				DD968E74292A4D5C007DEF58 /* AppCoordinator.swift */,
+				DD968E76292A4D80007DEF58 /* Coordinator.swift */,
+				DD968E7C292A4FEA007DEF58 /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DD968E73292A4D3B007DEF58 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E78292A4ED6007DEF58 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD968E7E292A5485007DEF58 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E7F292A549A007DEF58 /* DefaultHomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DD968E81292A54BA007DEF58 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E82292A54C4007DEF58 /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DD968E86292A5538007DEF58 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E8B292A5710007DEF58 /* DTO */,
+				DD968E8C292A5713007DEF58 /* Endpoint */,
+				DD968E87292A553F007DEF58 /* BaseNetworkService.swift */,
+				DD968E89292A5564007DEF58 /* Networkable.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DD968E8B292A5710007DEF58 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E92292A58A6007DEF58 /* HomeInfoResponseDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		DD968E8C292A5713007DEF58 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E8D292A5724007DEF58 /* HomeAPI.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		DD968E8F292A57EA007DEF58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDCAC123292A757600D242A8 /* Error */,
+				DD968E90292A57F4007DEF58 /* HomeInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD968E94292A65B9007DEF58 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E95292A65C7007DEF58 /* Home */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		DD968E95292A65C7007DEF58 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD968E96292A65CD007DEF58 /* HomeUseCase.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DDCAC123292A757600D242A8 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DDCAC124292A757E00D242A8 /* LocationError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +433,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD968E75292A4D5C007DEF58 /* AppCoordinator.swift in Sources */,
+				DD968E7B292A4FC9007DEF58 /* HomeViewModel.swift in Sources */,
+				DD968E72292A25FA007DEF58 /* BaseViewController.swift in Sources */,
+				DD968E88292A553F007DEF58 /* BaseNetworkService.swift in Sources */,
+				DD968E69292A23C3007DEF58 /* Bundle+.swift in Sources */,
+				DD968E85292A5517007DEF58 /* HomeNetworkService.swift in Sources */,
+				DD968E83292A54C4007DEF58 /* HomeRepository.swift in Sources */,
 				DD968E4A292A1B50007DEF58 /* AppDelegate.swift in Sources */,
 				DD968E4C292A1B50007DEF58 /* SceneDelegate.swift in Sources */,
+				DD968E79292A4ED6007DEF58 /* HomeCoordinator.swift in Sources */,
+				DD968E6F292A2531007DEF58 /* HomeViewController.swift in Sources */,
+				DD968E8E292A5724007DEF58 /* HomeAPI.swift in Sources */,
+				DD968E80292A549A007DEF58 /* DefaultHomeRepository.swift in Sources */,
+				DD968E93292A58A6007DEF58 /* HomeInfoResponseDTO.swift in Sources */,
+				DD968E7D292A4FEA007DEF58 /* ViewModelType.swift in Sources */,
+				DD968E97292A65CD007DEF58 /* HomeUseCase.swift in Sources */,
+				DD968E91292A57F4007DEF58 /* HomeInfo.swift in Sources */,
+				DDCAC125292A757E00D242A8 /* LocationError.swift in Sources */,
+				DD968E8A292A5564007DEF58 /* Networkable.swift in Sources */,
+				DD968E77292A4D80007DEF58 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +595,7 @@
 				DEVELOPMENT_TEAM = 6P7X76PR5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AEDFinderiOS/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"해당 앱은 AED(제세동기) 위치 조회를 위해 사용자의 현위치를 파악해야합니다\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -433,6 +626,7 @@
 				DEVELOPMENT_TEAM = 6P7X76PR5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AEDFinderiOS/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"해당 앱은 AED(제세동기) 위치 조회를 위해 사용자의 현위치를 파악해야합니다\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
