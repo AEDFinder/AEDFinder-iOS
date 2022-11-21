@@ -14,12 +14,13 @@ final class HomeViewController: BaseViewController {
     
     weak var coordinator: HomeCoordinator?
     private var viewModel: HomeViewModel!
-    
-
+    private var marker: NMFMarker = NMFMarker()
     
     private var mapView: NMFNaverMapView = {
         let view = NMFNaverMapView(frame: .init())
         view.showLocationButton = true
+        view.mapView.positionMode = .direction
+        view.mapView.zoomLevel = 17
         return view
     }()
     
@@ -72,6 +73,8 @@ final class HomeViewController: BaseViewController {
         let cameraUpdate = NMFCameraUpdate(scrollTo: coord)
         cameraUpdate.animation = .fly
         cameraUpdate.animationDuration = 2
+        marker.position = coord
+        marker.mapView = mapView.mapView
         return cameraUpdate
     }
 }
