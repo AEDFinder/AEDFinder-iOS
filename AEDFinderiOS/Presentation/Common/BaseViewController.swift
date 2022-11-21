@@ -16,15 +16,13 @@ class BaseViewController: UIViewController {
         
         setAttribute()
         setLayout()
+        setBind()
     }
     
-    func setAttribute() {
-        
-    }
+    func setAttribute() {}
     
-    func setLayout() {
-        
-    }
+    func setLayout() {}
     
-    
+    func setBind() {}
+
 }
