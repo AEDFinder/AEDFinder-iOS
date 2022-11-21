@@ -13,7 +13,6 @@ Pods/
 ## APIKEY
 APIKEY.swift
 APIKey.plist
-
 ### Objective-C ###
 # Xcode
 #
@@ -149,5 +148,10 @@ Dependencies/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# 특정 확장자를 가진 파일 전체 무시
+*.plist
+*.pdf
+*.zip
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,cocoapods,swift,objective-c
