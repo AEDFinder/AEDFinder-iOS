@@ -14,21 +14,27 @@ final class HomeNetworkService: BaseNetworkService<HomeAPI> {
     
     private var locationManager = CLLocationManager()
     private let disposeBag = DisposeBag()
-    func fetchHomeInfo() -> Observable<Result<HomeInfoResponseDTO, Error>> {
+    
+    func fetchHomeInfo(_ location: CLLocation) -> Observable<Result<[HomeInfoResponseDTO], LocationError>> {
         return self.request(.fetchHomeInfo)
             .filter(statusCode: 200)
-            .map(HomeInfoResponseDTO.self)
+            .map([HomeInfoResponseDTO].self)
             .map { Result.success($0) }
-            .catch { .just(Result.failure($0)) }
+            .debug()
+            .catch { _ in .just(Result.failure(LocationError.unableToFindAED)) }
             .asObservable()
     }
     
     func getCurrentLocation() -> Observable<Result<CLLocation, LocationError>> {
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        return locationManager.rx.location
-            .map { Result.success($0!) }
-            .catch { _ in .just(Result.failure(LocationError.unauthorized)) }
+        LocationPermissionManager.shared.requestLocation()
+            .bind { _ in }
+            .disposed(by: disposeBag)
+
+        return LocationPermissionManager.shared.locationSubject
+            .compactMap { Result.success($0 ?? CLLocation()) }
+            .catch { _ in
+                .just(Result.failure(LocationError.unableToDetermineLocation))
+            }
             .asObservable()
-    }
+        }
 }
