@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Then
 
 class HomeBottomSheetView: BottomSheetView {
     let bottomSheetView: UIView = {
@@ -20,6 +21,13 @@ class HomeBottomSheetView: BottomSheetView {
       view.backgroundColor = .darkGray
       view.isUserInteractionEnabled = false
       return view
+    }()
+    
+    lazy var aedListCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = .green.withAlphaComponent(0.3)
+        return view
     }()
     
     var mode: BottomSheetMode = .tip {
@@ -43,35 +51,40 @@ class HomeBottomSheetView: BottomSheetView {
       didSet { self.barView.backgroundColor = self.barViewColor }
     }
     
-    // MARK: Initializer
-      @available(*, unavailable)
       required init?(coder: NSCoder) {
-        fatalError("init() has not been implemented")
+          super.init(coder: coder)
       }
     
       override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        self.backgroundColor = .clear
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
-        self.addGestureRecognizer(panGesture)
-        
-        self.bottomSheetView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        self.bottomSheetView.layer.cornerRadius = Const.cornerRadius
-        self.bottomSheetView.clipsToBounds = true
-        
-        self.addSubview(self.bottomSheetView)
-        self.bottomSheetView.addSubview(self.barView)
-        
-        self.bottomSheetView.snp.makeConstraints {
-          $0.left.right.bottom.equalToSuperview()
-          $0.top.equalTo(Const.bottomSheetYPosition(.tip))
-        }
-        self.barView.snp.makeConstraints {
-          $0.centerX.equalToSuperview()
-          $0.top.equalToSuperview().inset(Const.barViewTopSpacing)
-          $0.size.equalTo(Const.barViewSize)
-        }
+          super.init(frame: frame)
+          
+          self.backgroundColor = .clear
+          let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan))
+          self.addGestureRecognizer(panGesture)
+          
+          self.bottomSheetView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+          self.bottomSheetView.layer.cornerRadius = Const.cornerRadius
+          self.bottomSheetView.clipsToBounds = true
+          
+          self.addSubview(bottomSheetView)
+          self.bottomSheetView.snp.makeConstraints {
+              $0.left.right.bottom.equalToSuperview()
+              $0.top.equalTo(Const.bottomSheetYPosition(.tip))
+          }
+          
+          self.bottomSheetView.addSubview(barView)
+          self.barView.snp.makeConstraints {
+              $0.centerX.equalToSuperview()
+              $0.top.equalToSuperview().inset(Const.barViewTopSpacing)
+              $0.size.equalTo(Const.barViewSize)
+          }
+          
+          self.bottomSheetView.addSubview(aedListCollectionView)
+          aedListCollectionView.snp.makeConstraints {
+              $0.top.equalTo(barView.snp.bottom).offset(30)
+              $0.leading.trailing.equalToSuperview().inset(10)
+              $0.bottom.equalToSuperview().inset(10)
+          }
       }
     
     // MARK: Methods
@@ -112,3 +125,4 @@ class HomeBottomSheetView: BottomSheetView {
       }
     }
 }
+
