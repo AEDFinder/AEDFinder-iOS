@@ -10,13 +10,16 @@ import Foundation
 enum LocationError: Error {
     case unauthorized
     case unableToDetermineLocation
+    case unableToFindAED
     
     var message: String {
         switch self {
         case .unauthorized:
-            return "위치 추적에 동희하지 않아 \n현재 위치를 가져올 수 없습니다."
+            return "위치 추적에 동의하지 않아 \n현재 위치를 가져올 수 없습니다."
         case .unableToDetermineLocation:
-            return "현재 위치를 가져올 수 없습니다. 관리자에게 문의해주세요."
+            return "현재 위치 추적에 실패했습니다."
+        case .unableToFindAED:
+            return "주변에 있는 제세동기가 없습니다."
         }
     }
 }

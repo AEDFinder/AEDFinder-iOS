@@ -10,7 +10,7 @@ import RxSwift
 import CoreLocation
 
 protocol HomeRepository: AnyObject {
-    func fetchHomeInfo() -> Observable<Result<HomeInfo, Error>>
+    func fetchHomeInfo(_ location: CLLocation) -> Observable<Result<[HomeInfo], LocationError>>
     
     func getCurrentLocation() -> Observable<Result<CLLocation, LocationError>>
 }
