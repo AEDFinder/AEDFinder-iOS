@@ -16,13 +16,13 @@ final class DefaultHomeRepository: HomeRepository {
         self.homeNetworkService = homeNetworkService
     }
     
-    func fetchHomeInfo() -> Observable<Result<HomeInfo, Error>> {
-        self.homeNetworkService.fetchHomeInfo()
+    func fetchHomeInfo(_ location: CLLocation) -> Observable<Result<[HomeInfo], LocationError>> {
+        self.homeNetworkService.fetchHomeInfo(location)
             .map {
-                result -> Result<HomeInfo, Error> in
+                result -> Result<[HomeInfo], LocationError> in
                 switch result {
                 case .success(let responseDTO):
-                    return .success(responseDTO.toDomain())
+                    return .success(responseDTO.map { $0.toDomain()} )
                 case .failure(let error):
                     return .failure(error)
                 }
