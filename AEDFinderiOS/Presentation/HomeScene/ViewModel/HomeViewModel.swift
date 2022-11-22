@@ -13,10 +13,13 @@ import CoreLocation
 final class HomeViewModel: ViewModelType {
     struct Input {
         let viewWillAppear: Observable<Void>
+
     }
     
     struct Output {
         let showCurrentLocation: Driver<CLLocation>
+        let showArroundAEDLocation: Driver<[HomeInfo]>
+        let showErrorValue: PublishRelay<LocationError>
     }
     
     private weak var coordinator: HomeCoordinator?
@@ -27,19 +30,40 @@ final class HomeViewModel: ViewModelType {
     }
     
     func transform(from input: Input) -> Output {
-        let fetchCurrentLocation = input.viewWillAppear
-            .debug()
-            .flatMap(homeUseCase.getCurrentLocation)
-            .compactMap { result -> CLLocation in
-                guard case let .success(location) = result else { return CLLocation() }
-                return location
-            }
-            
+        let didgotCurrnetLocation = PublishSubject<CLLocation>()
+        let errorValue = PublishRelay<LocationError>()
         
+        let fetchCurrentLocation = input.viewWillAppear
+            .flatMap(homeUseCase.getCurrentLocation)
+            .compactMap { result in
+                switch result {
+                case .success(let location):
+                    didgotCurrnetLocation.onNext(location)
+                    return location
+                case .failure(let error):
+                    errorValue.accept(error)
+                }
+                return CLLocation()
+            }
+                
+        let fetchAEDLocation = didgotCurrnetLocation.asObservable()
+        .flatMap(homeUseCase.fetchHomeInfo(_:))
+        .compactMap { result in
+            switch result {
+            case .success(let AEDs):
+                return AEDs
+            case .failure(let error):
+                errorValue.accept(error)
+            }
+            return []
+        }
+
         return Output(
             showCurrentLocation: fetchCurrentLocation
-                .asDriver(onErrorDriveWith: .empty())
-                
+                .asDriver(onErrorDriveWith: .empty()),
+            showArroundAEDLocation: fetchAEDLocation
+                .asDriver(onErrorJustReturn: []),
+            showErrorValue: errorValue
         )
     }
 }
