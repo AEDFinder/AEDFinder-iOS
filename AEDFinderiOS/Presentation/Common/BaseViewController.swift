@@ -14,9 +14,9 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setAttribute()
-        setLayout()
-        setBind()
+        self.setAttribute()
+        self.setLayout()
+        self.setBind()
     }
     
     func setAttribute() {}
@@ -25,4 +25,9 @@ class BaseViewController: UIViewController {
     
     func setBind() {}
 
+    func showAlert(_ title: String?, _ message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "확인", style: .default))
+        present(alertVC, animated: true, completion: nil)
+    }
 }
