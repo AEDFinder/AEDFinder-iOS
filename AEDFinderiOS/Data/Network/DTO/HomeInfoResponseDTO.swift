@@ -8,8 +8,16 @@
 import Foundation
 
 struct HomeInfoResponseDTO: Decodable {
+    let name: String
+    let lat: Double
+    let lon: Double
+    let local: String
     
     func toDomain() -> HomeInfo {
-        return HomeInfo(latitude: 126.542771, longitude: 37.305676)
+        return HomeInfo(
+            name: self.name,
+            lat: self.lat,
+            lon: self.lon,
+            local: self.local)
     }
 }
