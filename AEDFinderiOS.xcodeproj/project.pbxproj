@@ -132,6 +132,7 @@
 		DD968E48292A1B50007DEF58 /* AEDFinderiOS */ = {
 			isa = PBXGroup;
 			children = (
+				DD99F82829334EBD005A3916 /* Security */,
 				DD968E57292A1B51007DEF58 /* Info.plist */,
 				DD968E66292A217C007DEF58 /* APIKey.plist */,
 				DD968E5D292A1EC1007DEF58 /* Application */,
@@ -335,6 +336,13 @@
 				DD968E96292A65CD007DEF58 /* HomeUseCase.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DD99F82829334EBD005A3916 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 		DDCAC123292A757600D242A8 /* Error */ = {

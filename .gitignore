@@ -13,7 +13,7 @@ Pods/
 ## APIKEY
 APIKEY.swift
 APIKey.plist
-AEDFinderiOS/AEDFinderiOS/Security.swift
+Security/
 ### Objective-C ###
 # Xcode
 #
