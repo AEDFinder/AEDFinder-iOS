@@ -15,8 +15,12 @@ final class HomeNetworkService: BaseNetworkService<HomeAPI> {
     private var locationManager = CLLocationManager()
     private let disposeBag = DisposeBag()
     
-    func fetchHomeInfo(_ location: CLLocation) -> Observable<Result<[HomeInfoResponseDTO], LocationError>> {
-        return self.request(.fetchHomeInfo)
+    func fetchHomeInfo(_ location: CLLocation, radius: Int) -> Observable<Result<[HomeInfoResponseDTO], LocationError>> {
+        return self.request(.fetchHomeInfo(currentLocation: HomeInfoRequestDTO(
+            lat: location.coordinate.latitude,
+            lon: location.coordinate.longitude,
+            radius: radius
+        )))
             .filter(statusCode: 200)
             .map([HomeInfoResponseDTO].self)
             .map { Result.success($0) }

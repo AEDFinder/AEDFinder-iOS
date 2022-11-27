@@ -8,8 +8,8 @@
 import Foundation
 
 struct HomeInfoRequestDTO: Encodable {
-    let latitude: Double
-    let longitude: Double
+    let lat: Double
+    let lon: Double
     
     func toDictionary() -> [String: Any]? {
         guard let object = try? JSONEncoder().encode(self) else { return nil }

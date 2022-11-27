@@ -8,6 +8,8 @@
 import Foundation
 
 struct HomeInfo {
-    let latitude: Double
-    let longitude: Double
+    let name: String
+    let lat: Double
+    let lon: Double
+    let local: String
 }
