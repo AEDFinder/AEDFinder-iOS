@@ -15,4 +15,5 @@ target 'AEDFinderiOS' do
   pod 'Kingfisher', '~> 7.0'
   pod 'Then'
   pod 'RxCoreLocation', '~> 1.5.1'
+  pod 'RxAppState'
 end

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeCoordinator: Coordinator {
-    func showMain()
+    func showBottomSheet()
 }
 
 final class DefaultHomeCoordinator: HomeCoordinator {
@@ -30,7 +30,7 @@ final class DefaultHomeCoordinator: HomeCoordinator {
         self.navigationController.pushViewController(vc, animated: true)
     }
     
-    func showMain() {
+    func showBottomSheet() {
         
     }
     

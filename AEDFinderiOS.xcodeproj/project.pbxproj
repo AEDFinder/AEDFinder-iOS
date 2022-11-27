@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B6E012F3377DE356C696ABB0 /* Pods_AEDFinderiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585E1A6ACE686C59A04F5256 /* Pods_AEDFinderiOS.framework */; };
+		DD017E79292B8ADB00F91DEA /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD017E78292B8ADB00F91DEA /* UIFont+.swift */; };
+		DD017E7B292BB6AE00F91DEA /* Rx+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD017E7A292BB6AE00F91DEA /* Rx+.swift */; };
+		DD017E7F292C965800F91DEA /* LocationPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD017E7E292C965800F91DEA /* LocationPermissionManager.swift */; };
 		DD968E4A292A1B50007DEF58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E49292A1B50007DEF58 /* AppDelegate.swift */; };
 		DD968E4C292A1B50007DEF58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E4B292A1B50007DEF58 /* SceneDelegate.swift */; };
 		DD968E53292A1B51007DEF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD968E52292A1B51007DEF58 /* Assets.xcassets */; };
@@ -31,11 +34,20 @@
 		DD968E93292A58A6007DEF58 /* HomeInfoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E92292A58A6007DEF58 /* HomeInfoResponseDTO.swift */; };
 		DD968E97292A65CD007DEF58 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD968E96292A65CD007DEF58 /* HomeUseCase.swift */; };
 		DDCAC125292A757E00D242A8 /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC124292A757E00D242A8 /* LocationError.swift */; };
+		DDCAC127292B0BBB00D242A8 /* HomeInfoRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC126292B0BBB00D242A8 /* HomeInfoRequestDTO.swift */; };
+		DDCAC129292B36B600D242A8 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC128292B36B600D242A8 /* BottomSheetView.swift */; };
+		DDCAC12B292B389C00D242A8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC12A292B389C00D242A8 /* UIView+.swift */; };
+		DDCAC12D292B41CB00D242A8 /* HomeBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC12C292B41CB00D242A8 /* HomeBottomSheetView.swift */; };
+		DDCAC132292B432200D242A8 /* BottomSheetMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC131292B432200D242A8 /* BottomSheetMode.swift */; };
+		DDCAC136292B677700D242A8 /* AEDSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAC135292B677700D242A8 /* AEDSelectCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3118168D51A1FC683A61CD98 /* Pods-AEDFinderiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEDFinderiOS.release.xcconfig"; path = "Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS.release.xcconfig"; sourceTree = "<group>"; };
 		585E1A6ACE686C59A04F5256 /* Pods_AEDFinderiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEDFinderiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD017E78292B8ADB00F91DEA /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		DD017E7A292BB6AE00F91DEA /* Rx+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+.swift"; sourceTree = "<group>"; };
+		DD017E7E292C965800F91DEA /* LocationPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionManager.swift; sourceTree = "<group>"; };
 		DD968E46292A1B50007DEF58 /* AEDFinderiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEDFinderiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD968E49292A1B50007DEF58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD968E4B292A1B50007DEF58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,12 @@
 		DD968E92292A58A6007DEF58 /* HomeInfoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoResponseDTO.swift; sourceTree = "<group>"; };
 		DD968E96292A65CD007DEF58 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		DDCAC124292A757E00D242A8 /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
+		DDCAC126292B0BBB00D242A8 /* HomeInfoRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoRequestDTO.swift; sourceTree = "<group>"; };
+		DDCAC128292B36B600D242A8 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		DDCAC12A292B389C00D242A8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		DDCAC12C292B41CB00D242A8 /* HomeBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomSheetView.swift; sourceTree = "<group>"; };
+		DDCAC131292B432200D242A8 /* BottomSheetMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetMode.swift; sourceTree = "<group>"; };
+		DDCAC135292B677700D242A8 /* AEDSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEDSelectCell.swift; sourceTree = "<group>"; };
 		FB62EF725B2BD38B6A27C8E4 /* Pods-AEDFinderiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEDFinderiOS.debug.xcconfig"; path = "Target Support Files/Pods-AEDFinderiOS/Pods-AEDFinderiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DD968E84292A5517007DEF58 /* HomeNetworkService.swift */,
+				DD017E7E292C965800F91DEA /* LocationPermissionManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -185,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				DD968E68292A23C3007DEF58 /* Bundle+.swift */,
+				DDCAC12A292B389C00D242A8 /* UIView+.swift */,
+				DD017E78292B8ADB00F91DEA /* UIFont+.swift */,
+				DD017E7A292BB6AE00F91DEA /* Rx+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -203,6 +225,8 @@
 		DD968E6B292A2517007DEF58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DDCAC12C292B41CB00D242A8 /* HomeBottomSheetView.swift */,
+				DDCAC135292B677700D242A8 /* AEDSelectCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +254,7 @@
 				DD968E74292A4D5C007DEF58 /* AppCoordinator.swift */,
 				DD968E76292A4D80007DEF58 /* Coordinator.swift */,
 				DD968E7C292A4FEA007DEF58 /* ViewModelType.swift */,
+				DDCAC128292B36B600D242A8 /* BottomSheetView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -272,6 +297,7 @@
 		DD968E8B292A5710007DEF58 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				DDCAC126292B0BBB00D242A8 /* HomeInfoRequestDTO.swift */,
 				DD968E92292A58A6007DEF58 /* HomeInfoResponseDTO.swift */,
 			);
 			path = DTO;
@@ -288,6 +314,7 @@
 		DD968E8F292A57EA007DEF58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDCAC130292B431600D242A8 /* Enum */,
 				DDCAC123292A757600D242A8 /* Error */,
 				DD968E90292A57F4007DEF58 /* HomeInfo.swift */,
 			);
@@ -316,6 +343,14 @@
 				DDCAC124292A757E00D242A8 /* LocationError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		DDCAC130292B431600D242A8 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				DDCAC131292B432200D242A8 /* BottomSheetMode.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD968E75292A4D5C007DEF58 /* AppCoordinator.swift in Sources */,
+				DDCAC129292B36B600D242A8 /* BottomSheetView.swift in Sources */,
 				DD968E7B292A4FC9007DEF58 /* HomeViewModel.swift in Sources */,
 				DD968E72292A25FA007DEF58 /* BaseViewController.swift in Sources */,
 				DD968E88292A553F007DEF58 /* BaseNetworkService.swift in Sources */,
@@ -441,18 +477,26 @@
 				DD968E85292A5517007DEF58 /* HomeNetworkService.swift in Sources */,
 				DD968E83292A54C4007DEF58 /* HomeRepository.swift in Sources */,
 				DD968E4A292A1B50007DEF58 /* AppDelegate.swift in Sources */,
+				DDCAC136292B677700D242A8 /* AEDSelectCell.swift in Sources */,
 				DD968E4C292A1B50007DEF58 /* SceneDelegate.swift in Sources */,
+				DD017E7B292BB6AE00F91DEA /* Rx+.swift in Sources */,
 				DD968E79292A4ED6007DEF58 /* HomeCoordinator.swift in Sources */,
 				DD968E6F292A2531007DEF58 /* HomeViewController.swift in Sources */,
 				DD968E8E292A5724007DEF58 /* HomeAPI.swift in Sources */,
 				DD968E80292A549A007DEF58 /* DefaultHomeRepository.swift in Sources */,
+				DDCAC12D292B41CB00D242A8 /* HomeBottomSheetView.swift in Sources */,
+				DDCAC127292B0BBB00D242A8 /* HomeInfoRequestDTO.swift in Sources */,
 				DD968E93292A58A6007DEF58 /* HomeInfoResponseDTO.swift in Sources */,
 				DD968E7D292A4FEA007DEF58 /* ViewModelType.swift in Sources */,
 				DD968E97292A65CD007DEF58 /* HomeUseCase.swift in Sources */,
 				DD968E91292A57F4007DEF58 /* HomeInfo.swift in Sources */,
+				DDCAC132292B432200D242A8 /* BottomSheetMode.swift in Sources */,
 				DDCAC125292A757E00D242A8 /* LocationError.swift in Sources */,
+				DD017E79292B8ADB00F91DEA /* UIFont+.swift in Sources */,
 				DD968E8A292A5564007DEF58 /* Networkable.swift in Sources */,
+				DD017E7F292C965800F91DEA /* LocationPermissionManager.swift in Sources */,
 				DD968E77292A4D80007DEF58 /* Coordinator.swift in Sources */,
+				DDCAC12B292B389C00D242A8 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
