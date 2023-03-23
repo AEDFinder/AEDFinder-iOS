@@ -9,18 +9,18 @@ import Foundation
 import Moya
 
 enum HomeAPI {
-    case fetchHomeInfo
+    case fetchHomeInfo(currentLocation: HomeInfoRequestDTO)
 }
 
 extension HomeAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "url")!
+        return APP.baseURL
     }
     
     var path: String {
         switch self {
         case .fetchHomeInfo:
-            return "home Path"
+            return "/aed/finder"
         }
     }
     
@@ -33,8 +33,9 @@ extension HomeAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .fetchHomeInfo:
-            return .requestPlain
+        case .fetchHomeInfo(let reqData):
+            let param = reqData.toDictionary() ?? [:]
+            return .requestParameters(parameters: param, encoding: URLEncoding.default)
         }
     }
     

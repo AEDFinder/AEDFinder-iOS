@@ -16,8 +16,8 @@ final class DefaultHomeRepository: HomeRepository {
         self.homeNetworkService = homeNetworkService
     }
     
-    func fetchHomeInfo(_ location: CLLocation) -> Observable<Result<[HomeInfo], LocationError>> {
-        self.homeNetworkService.fetchHomeInfo(location)
+    func fetchHomeInfo(_ location: CLLocation, radius: Int) -> Observable<Result<[HomeInfo], LocationError>> {
+        self.homeNetworkService.fetchHomeInfo(location, radius: radius)
             .map {
                 result -> Result<[HomeInfo], LocationError> in
                 switch result {

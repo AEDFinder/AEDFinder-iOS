@@ -27,6 +27,27 @@ final class HomeViewController: BaseViewController {
         return view
     }()
     
+    private var fiftyRadiusButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.black, for: .normal)
+        button.setTitle("50m", for: .normal)
+        return button
+    }()
+    
+    private var hundredRadiusButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.black, for: .normal)
+        button.setTitle("100m", for: .normal)
+        return button
+    }()
+    
+    private var twoHundredRadiusRadiusButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.black, for: .normal)
+        button.setTitle("200m", for: .normal)
+        return button
+    }()
+    
     private lazy var bottomSheetView: HomeBottomSheetView = {
         let view = HomeBottomSheetView()
         view.barViewColor = .darkGray.withAlphaComponent(0.5)
@@ -65,17 +86,43 @@ final class HomeViewController: BaseViewController {
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         
+        view.addSubview(fiftyRadiusButton)
+        fiftyRadiusButton.snp.makeConstraints {
+            $0.width.equalTo(100)
+            $0.height.equalTo(50)
+            $0.trailing.equalToSuperview().inset(20)
+            $0.centerY.equalToSuperview()
+        }
+        
+        view.addSubview(hundredRadiusButton)
+        hundredRadiusButton.snp.makeConstraints {
+            $0.top.equalTo(fiftyRadiusButton.snp.bottom).offset(10)
+            $0.trailing.width.height.equalTo(fiftyRadiusButton)
+        }
+        
+        view.addSubview(twoHundredRadiusRadiusButton)
+        twoHundredRadiusRadiusButton.snp.makeConstraints {
+            $0.top.equalTo(hundredRadiusButton.snp.bottom).offset(10)
+            $0.trailing.width.height.equalTo(fiftyRadiusButton)
+        }
+        
         view.addSubview(bottomSheetView)
         bottomSheetView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
     }
     
     override func setBind() {
         super.setBind()
         
         let input = HomeViewModel.Input(
-            viewWillAppear: rx.viewWillAppear.mapToVoid()
+            viewWillAppear: rx.viewWillAppear.mapToVoid(),
+            didTappedRadiusButton: Observable.merge(
+                fiftyRadiusButton.rx.fiftyRadius,
+                hundredRadiusButton.rx.hundredRadius,
+                twoHundredRadiusRadiusButton.rx.twoHundredRadius
+            )
         )
 
         let output = viewModel.transform(from: input)
@@ -87,7 +134,22 @@ final class HomeViewController: BaseViewController {
                 strongSelf.mapView.mapView.moveCamera(camera)
             }).disposed(by: self.disposeBag)
         
+        //TODO: Marker 지우는 법! 
         output.showArroundAEDLocation
+            .debug()
+            .do(onNext: { AEDs in
+                var markers = [NMFMarker]()
+                for i in AEDs.indices {
+                    let marker = NMFMarker(position: NMGLatLng(lat: AEDs[i].lat, lng: AEDs[i].lon))
+                    marker.captionText = "\(AEDs[i].local)"
+                    markers.append(marker)
+                }
+                DispatchQueue.main.async { [weak self] in
+                    for marker in markers {
+                        marker.mapView = self?.mapView.mapView
+                    }
+                }
+            })
             .drive(bottomSheetView.aedListCollectionView.rx.items(cellIdentifier: AEDSelectCell.identifier, cellType: AEDSelectCell.self)) { (index: Int, element: HomeInfo, cell) in
                 cell.update(with: element)
             }.disposed(by: disposeBag)

@@ -41,7 +41,7 @@ import SnapKit
     }
     
     func update(with aed: HomeInfo) {
-        title.text = "\(aed.latitude)"
+        title.text = "\(aed.local)"
     }
     
 }
