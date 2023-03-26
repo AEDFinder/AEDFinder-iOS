@@ -62,31 +62,6 @@ final class HomeViewModel: ViewModelType {
                 }
                 return []
             }
-          
-//        let fetchAEDLocation = didgotCurrnetLocation.asObservable()
-//            .debug()
-//            .flatMap { self.homeUseCase.fetchHomeInfo($0, radius: 1000)}
-//        .compactMap { result in
-//            switch result {
-//            case .success(let AEDs):
-//                return AEDs
-//            case .failure(let error):
-//                errorValue.accept(error)
-//            }
-//            return []
-//        }
-        
-//        let fetchAEDLocation = didgotCurrnetLocation.asObservable()
-//        .flatMap(homeUseCase.fetchHomeInfo(_:))
-//        .compactMap { result in
-//            switch result {
-//            case .success(let AEDs):
-//                return AEDs
-//            case .failure(let error):
-//                errorValue.accept(error)
-//            }
-//            return []
-//        }
 
         return Output(
             showCurrentLocation: fetchCurrentLocation
