@@ -19,6 +19,8 @@ class LocationPermissionManager {
         let manager = CLLocationManager()
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.distanceFilter = kCLDistanceFilterNone
+        manager.pausesLocationUpdatesAutomatically = false
+        manager.distanceFilter = 5.0
         return manager
     }()
     
@@ -39,9 +41,8 @@ class LocationPermissionManager {
                     .map { $1 }
                     .filter { $0 != .notDetermined }
                     .do(onNext: { _ in self.locationManager.startUpdatingLocation()
-                        self.locationManager.stopUpdatingLocation()
                     })
-                    .take(1)
+                    .take(2)
             }
     }
 }
