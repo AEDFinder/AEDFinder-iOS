@@ -18,8 +18,7 @@ final class HomeNetworkService: BaseNetworkService<HomeAPI> {
     func fetchHomeInfo(_ location: CLLocation, radius: Int) -> Observable<Result<[HomeInfoResponseDTO], LocationError>> {
         return self.request(.fetchHomeInfo(currentLocation: HomeInfoRequestDTO(
             lat: location.coordinate.latitude,
-            lon: location.coordinate.longitude,
-            radius: radius
+            lon: location.coordinate.longitude
         )))
             .filter(statusCode: 200)
             .map([HomeInfoResponseDTO].self)
