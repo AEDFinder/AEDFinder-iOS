@@ -30,6 +30,10 @@ final class Toast: UIView {
         body.flex.intrinsicSize
     }
     
+    public var bodyHeight: CGFloat {
+        return body.flex.intrinsicSize.height
+    }
+    
     private let input: Input
     
     private let body = UIView()
@@ -58,7 +62,7 @@ final class Toast: UIView {
         
         body.flex.direction(.row).alignItems(.center).justifyContent(.spaceBetween).define { flex in
             flex.direction(.row).alignItems(.center).define { flex in
-                flex.addItem(UILabel(text: input.title, textColor: input.colors.contentColor, font: UIFont(), numberOfLines: 0).then {
+                flex.addItem(UILabel(text: input.title, textColor: input.colors.contentColor, font: UIFont.SD_Gothic(.bold, size: 14), textAlignment: .left, numberOfLines: 0).then {
                     $0.lineBreakMode = .byCharWrapping
                 })
                 .shrink(1)
@@ -69,7 +73,7 @@ final class Toast: UIView {
             .marginVertical(8)
             
             if let confirmButtonTitle = input.confirmButtonTitle {
-                flex.addItem(UILabel(text: confirmButtonTitle, textColor: .orange, font: UIFont(), numberOfLines: 0))
+                flex.addItem(UILabel(text: confirmButtonTitle, textColor: .orange, font: UIFont.SD_Gothic(.bold, size: 14), textAlignment: .center, numberOfLines: 0))
                     .margin(12)
                     .onTap(disposeBag: disposeBag, throttle: .milliseconds(300)) { [weak self] in
                         //TODO: Toast 버튼 액션
@@ -83,8 +87,6 @@ final class Toast: UIView {
         body.layer.masksToBounds = false
         body.layer.shadowColor = UIColor.black.cgColor
     }
-        
-
     
 }
 
