@@ -155,8 +155,8 @@ final class HomeViewController: BaseViewController {
             }.disposed(by: disposeBag)
         
         output.showErrorValue.asSignal()
-            .emit(onNext: { [weak self] error in
-                self?.showAlert(nil, error.message)
+            .emit(onNext: { error in
+                ToastManager.shared.show(.init(title: error.message, colors: .blackColorSet))
             }).disposed(by: disposeBag)
             
 
