@@ -41,7 +41,7 @@ final class HomeViewController: BaseViewController {
         return button
     }()
     
-    private var twoHundredRadiusRadiusButton: UIButton = {
+    private var twoHundredRadiusButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(.black, for: .normal)
         button.setTitle("200m", for: .normal)
@@ -100,8 +100,8 @@ final class HomeViewController: BaseViewController {
             $0.trailing.width.height.equalTo(fiftyRadiusButton)
         }
         
-        view.addSubview(twoHundredRadiusRadiusButton)
-        twoHundredRadiusRadiusButton.snp.makeConstraints {
+        view.addSubview(twoHundredRadiusButton)
+        twoHundredRadiusButton.snp.makeConstraints {
             $0.top.equalTo(hundredRadiusButton.snp.bottom).offset(10)
             $0.trailing.width.height.equalTo(fiftyRadiusButton)
         }
@@ -121,7 +121,7 @@ final class HomeViewController: BaseViewController {
             didTappedRadiusButton: Observable.merge(
                 fiftyRadiusButton.rx.fiftyRadius,
                 hundredRadiusButton.rx.hundredRadius,
-                twoHundredRadiusRadiusButton.rx.twoHundredRadius
+                twoHundredRadiusButton.rx.twoHundredRadius
             )
         )
 
